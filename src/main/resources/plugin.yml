@@ -1,0 +1,40 @@
+name: LankciDuels
+version: '${project.version}'
+main: com.lankciworld.lankciduels.LankciDuels
+api-version: '1.21'
+author: LankciWorld
+description: Standalone PvP duels plugin with arenas, kits, ratings and betting.
+softdepend: [Vault, PlaceholderAPI, Multiverse-Core, Multiverse-Inventories]
+
+commands:
+  duel:
+    description: Main LankciDuels command.
+    usage: /<command> <player>
+    permission: lankciduels.use
+  dueladmin:
+    description: LankciDuels administration command.
+    usage: /<command> <subcommand>
+    permission: lankciduels.admin
+
+permissions:
+  lankciduels.use:
+    description: Allows use of the base /duel command.
+    default: true
+  lankciduels.duel:
+    description: Allows sending and receiving duel requests.
+    default: true
+  lankciduels.stats:
+    description: Allows viewing stats and the leaderboard.
+    default: true
+  lankciduels.admin:
+    description: Allows use of /dueladmin.
+    default: op
+  lankciduels.admin.reload:
+    description: Allows reloading the plugin configuration.
+    default: op
+  lankciduels.admin.arena:
+    description: Allows creating, deleting and configuring arenas.
+    default: op
+  lankciduels.admin.forcestop:
+    description: Allows force-stopping any active duel.
+    default: op

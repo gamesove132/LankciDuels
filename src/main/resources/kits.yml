@@ -1,0 +1,85 @@
+# =====================================================================
+#  LankciDuels — kits.yml
+#  Кожен kit = окремий режим дуелі. Можна додавати власні розділи,
+#  копіюючи структуру нижче — Java-код нічого не хардкодить.
+#
+#  gui.slot     — слот у меню вибору режиму (/duel <гравець>)
+#  gui.material — предмет-іконка
+#  gui.name     — назва предмета в GUI
+#  gui.lore     — опис (список рядків)
+#  items        — вміст інвентаря гравця під час дуелі (слот: матеріал)
+#  armor        — броня (helmet/chestplate/leggings/boots)
+#  offhand      — предмет в другій руці (необов'язково)
+# =====================================================================
+
+kits:
+
+  sword:
+    enabled: true
+    display-name: "&fSword"
+    gui:
+      slot: 11
+      material: "IRON_SWORD"
+      name: "&e&lSword"
+      lore:
+        - "&7Класична дуель на мечах."
+        - "&7Без луків, без зілль."
+        - ""
+        - "&aНатисніть, щоб вибрати"
+    items:
+      0: "IRON_SWORD:1"
+      1: "BOW:1"
+      8: "ARROW:16"
+    armor:
+      helmet: "IRON_HELMET"
+      chestplate: "IRON_CHESTPLATE"
+      leggings: "IRON_LEGGINGS"
+      boots: "IRON_BOOTS"
+    offhand: ""
+
+  uhc:
+    enabled: true
+    display-name: "&cUHC"
+    gui:
+      slot: 13
+      material: "GOLDEN_APPLE"
+      name: "&c&lUHC"
+      lore:
+        - "&7Без регенерації здоров'я."
+        - "&7Виживання на повну."
+        - ""
+        - "&aНатисніть, щоб вибрати"
+    items:
+      0: "DIAMOND_SWORD:1"
+      1: "GOLDEN_APPLE:4"
+      2: "COOKED_BEEF:16"
+    armor:
+      helmet: "DIAMOND_HELMET"
+      chestplate: "DIAMOND_CHESTPLATE"
+      leggings: "DIAMOND_LEGGINGS"
+      boots: "DIAMOND_BOOTS"
+    offhand: ""
+
+  potion:
+    enabled: true
+    display-name: "&dPotion PvP"
+    gui:
+      slot: 15
+      material: "SPLASH_POTION"
+      name: "&d&lPotion"
+      lore:
+        - "&7Бій із зіллями та бонусними ударами."
+        - ""
+        - "&aНатисніть, щоб вибрати"
+    items:
+      0: "DIAMOND_SWORD:1"
+      1: "SPLASH_POTION:1"
+      2: "SPLASH_POTION:1"
+      3: "SPLASH_POTION:1"
+      8: "GOLDEN_APPLE:2"
+    armor:
+      helmet: "CHAINMAIL_HELMET"
+      chestplate: "CHAINMAIL_CHESTPLATE"
+      leggings: "CHAINMAIL_LEGGINGS"
+      boots: "CHAINMAIL_BOOTS"
+    offhand: "SHIELD"
